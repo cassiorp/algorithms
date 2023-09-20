@@ -14,6 +14,8 @@ public interface List {
 
   public boolean remove(Object o);
 
+  public boolean remove(int index);
+
   public boolean addAll(Collection c);
 
   public Object get(int index);

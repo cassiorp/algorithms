@@ -1,5 +1,7 @@
 package org.example.arrayList;
 
+import static java.util.List.of;
+
 import java.util.Collection;
 
 public class ArrayList implements List {
@@ -26,28 +28,64 @@ public class ArrayList implements List {
 
   @Override
   public boolean contains(Object o) {
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] == o) {
+        return true;
+      }
+    }
     return false;
   }
-
 
   @Override
   public boolean add(Object o) {
     if (array.length > 0) {
       Object[] newArray = new Object[array.length + 1];
-      for (int i = 0; i < newArray.length; i++) {
-        newArray[i] = i;
+      for (int i = 0; i < array.length; i++) {
+        newArray[i] = array[i];
       }
-      newArray[newArray.length -1] = o;
+      int index = newArray.length - 1;
+      newArray[index] = o;
       array = newArray;
     } else {
-      array = new Object[]{0};
+      array = new Object[]{o};
     }
     return true;
   }
 
   @Override
   public boolean remove(Object o) {
-    return false;
+    Object[] newArray = new Object[array.length - 1];
+    int indexNovoArray = 0;
+    if (this.contains(o)) {
+      for (int i = 0; i < array.length; i++) {
+        if (!array[i].equals(o)) {
+          newArray[indexNovoArray] = array[i];
+          indexNovoArray++;
+        }
+      }
+      array = newArray;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  @Override
+  public boolean remove(int index) {
+    if(index > array.length -1) {
+      return false;
+    }
+
+    Object[] newArray = new Object[array.length - 1];
+    int indexNovoArray = 0;
+    for (int i = 0; i < array.length; i++) {
+      if (index != i) {
+        newArray[indexNovoArray] = array[i];
+        indexNovoArray++;
+      }
+    }
+    array = newArray;
+    return true;
   }
 
   @Override
