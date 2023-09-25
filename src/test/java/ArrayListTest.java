@@ -2,7 +2,7 @@ import static java.util.List.of;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.example.arrayList.ArrayList;
-import org.example.arrayList.List;
+import org.example.List;
 import org.junit.jupiter.api.Test;
 
 public class ArrayListTest {
