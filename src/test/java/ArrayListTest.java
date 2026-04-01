@@ -9,19 +9,19 @@ public class ArrayListTest {
 
   @Test
   public void shouldReturnSizeZero() {
-    List listEmpty = new ArrayList();
+    List<Number> listEmpty = new ArrayList();
     assertEquals(0, listEmpty.size());
   }
 
   @Test
   public void shouldReturnSizeTwo() {
-    List list = new ArrayList(of(1, 2));
+    List<Number> list = new ArrayList(of(1, 2));
     assertEquals(2, list.size());
   }
 
   @Test
   public void shouldAddElementWithEmptyConstructor() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -32,7 +32,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldAddElementWithParameterConstructor() {
-    List list = new ArrayList(of(1, 2));
+    List<Number> list = new ArrayList(of(1, 2));
     list.add(1);
     assertEquals(3, list.size());
     assertEquals(true, list.contains(2));
@@ -40,20 +40,20 @@ public class ArrayListTest {
 
   @Test
   public void shouldReturnEmpty() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     assertEquals(true, list.isEmpty());
   }
 
   @Test
   public void shouldNotReturnEmpty() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     assertEquals(false, list.isEmpty());
   }
 
   @Test
   public void shouldReturnContainsTrue() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -62,7 +62,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldReturnContainsFalse() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -71,7 +71,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldRemoveByObject() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -82,7 +82,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldNotRemoveByObject() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -91,7 +91,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldRemoveByIndex() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);
@@ -103,7 +103,7 @@ public class ArrayListTest {
 
   @Test
   public void shouldNotRemoveByIndex() {
-    List list = new ArrayList();
+    List<Number> list = new ArrayList();
     list.add(1);
     list.add(2);
     list.add(3);

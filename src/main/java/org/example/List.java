@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Collection;
 
-public interface List {
+public interface List<I extends Number> {
 
   public int size();
 

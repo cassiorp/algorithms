@@ -3,7 +3,7 @@ package org.example.linkedList;
 import java.util.Collection;
 import org.example.List;
 
-public class LinkedList implements List {
+public class LinkedList implements List<Number> {
 
   Node first;
   Node last;
